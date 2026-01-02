@@ -951,3 +951,35 @@ html[data-theme="dark"] #toggle-mode-btn i {
         font-size: 0.85rem;
     }
 }
+/* Search + Sort Wrapper */
+.search-sort-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 🔑 spacing between search & sort */
+    margin: 20px 0 30px;
+    flex-wrap: wrap;
+}
+
+/* Sort Dropdown */
+.sort-container select {
+    padding: 10px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sort-container select:hover {
+    border-color: var(--primary);
+}
+
+.sort-container select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
