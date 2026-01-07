@@ -1057,5 +1057,41 @@
     "link": "./projects/Sudoku_Solver/index.html",
     "icon": "ri-grid-fill",
     "coverStyle": "background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); color: white;"
+  },
+  {
+    "title": "Random Idea Generator",
+    "category": "utility",
+    "description": "Generate creative ideas instantly with smooth animations and a clean UI.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "link": "./projects/Random_Idea_Generator/index.html",
+    "icon": "ri-lightbulb-flash-line",
+    "coverStyle": "background:linear-gradient(135deg,#667eea,#764ba2); color:white"
+  },
+  {
+    "title": "AI Git Commit Generator",
+    "category": "utility",
+    "description": "AI-powered suggestions based on your code changes.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "link": "./projects/GitCommit/index.html",
+    "icon": "ri-checkbox-line",
+    "coverStyle": "background:#afdfff; color:#000;"
+  },
+  {
+    "title": "PDF Merger",
+    "category": "utility",
+    "description": "Merge multiple PDF files into one document directly in your browser.",
+    "tech": ["HTML", "CSS", "JS"],
+    "link": "./projects/MergeDoc/index.html",
+    "icon": "ri-file-copy-2-line",
+    "coverStyle": "background:#7a1050; color:white;"
+  },
+  {
+    "title": "Memory Challenge (ABC)",
+    "category": "game",
+    "description": "Test your memory by matching cards within limited moves and time.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "link": "./projects/memory-flip-game/index.html",
+    "icon": "ri-brain-line",
+    "coverStyle": "background:#8b5cf6; color:white;"
   }
 ]
