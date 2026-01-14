@@ -2946,7 +2946,18 @@
   "link": "./projects/random-fun-fact-generator/index.html",
   "icon": "ri-lightbulb-flash-line",
   "coverStyle": "background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%); color: white;"
-}
+  },
+
+  {
+  "title": "Random Excuse Generator",
+  "category": "utility",
+  "description": "A fun and interactive utility web app that generates random excuses based on selected categories such as work, study, or general, presented in a clean, card-based UI with instant content updates.",
+  "tech": ["HTML", "CSS", "JavaScript"],
+  "link": "./projects/random-excuse-generator/index.html",
+  "icon": "ri-emotion-laugh-line",
+  "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #8b5cf6 100%); color: white;"
+  }
+
 
 
 ]
