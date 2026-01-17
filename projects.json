@@ -6370,8 +6370,8 @@
   "link": "./projects/Settings_Page_Simulator/index.html",
   "icon": "ri-settings-3-line",
   "coverStyle": "background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); color:#0f172a;"
-}
-  "difficulty": "Advanced",
+},
+ { "difficulty": "Advanced",
   "description": "Step-by-step visualization of system architecture patterns like URL shortener with explanations.",
   "tech": [
     "HTML",
