@@ -1,0 +1,13 @@
+{
+  "title": "Screenshort Capture",
+  "category": "utility",
+  "difficulty": "Beginner",
+  "description": "A utility project built with HTML, CSS, and JavaScript.",
+  "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "icon": "ri-scissors-line",
+  "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"
+}
