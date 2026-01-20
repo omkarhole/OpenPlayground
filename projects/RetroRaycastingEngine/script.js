@@ -121,7 +121,7 @@ class TextureManager {
                         color = this.packColor(c, c, c);
                     }
 
-                    buffer[y * CONFIG.texHeight + x] = color;
+                    buffer[y * CONFIG.texWidth + x] = color;
                 }
             }
             this.textures[t] = buffer;
