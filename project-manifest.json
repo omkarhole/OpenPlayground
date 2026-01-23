@@ -14,6 +14,11 @@
       "link": "./projects/2048-puzzle/index.html"
     },
     {
+      "folder": "Attention Garden",
+      "path": "./projects/AttentionGarden/project.json",
+      "link": "./projects/AttentionGarden/index.html"
+    },
+    {
       "folder": "365Days",
       "path": "./projects/365Days/project.json",
       "link": "./projects/365Days/index.html"
@@ -22,6 +27,9 @@
       "folder": "DigitalPresenceMirror",
       "path": "./projects/DigitalPresenceMirror/project.json",
       "link": "./projects/DigitalPresenceMirror/index.html"
+      "folder": "ThoughtSpeedAnalyzer",
+      "path": "./projects/ThoughtSpeedAnalyzer/project.json",
+      "link": "./projects/ThoughtSpeedAnalyzer/index.html"
     },
     {
       "folder": "AccessibilityColorLab",
@@ -1557,6 +1565,11 @@
       "folder": "WorldMeetingPlanner",
       "path": "./projects/WorldMeetingPlanner/project.json",
       "link": "./projects/WorldMeetingPlanner/index.html"
+    },
+     {
+      "folder": "voice-forge",
+      "path": "./projects/voice-forge/project.json",
+      "link": "./projects/voice-forge/index.html"
     }
   ]
 }
