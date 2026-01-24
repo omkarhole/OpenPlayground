@@ -4,6 +4,8 @@
 
 import { ProjectVisibilityEngine } from "./core/projectVisibilityEngine.js";
 import { keyevents } from "./core/Shortcut.js"
+import { deadlineManager } from "./projectDeadlineManager.js";
+import { deadlineUI } from "./deadlineUI.js";
 
 class ProjectManager {
     constructor() {
@@ -201,6 +203,11 @@ class ProjectManager {
         if (el.randomProjectBtn) {
             el.randomProjectBtn.addEventListener('click', () => this.openRandomProject());
         }
+
+        // Listen for deadline updates
+        window.addEventListener('deadlineUpdated', () => {
+            this.render();
+        });
     }
 
     setViewMode(mode) {
@@ -239,6 +246,8 @@ class ProjectManager {
         if (sortMode === 'az') filtered.sort((a, b) => a.title.localeCompare(b.title));
         else if (sortMode === 'za') filtered.sort((a, b) => b.title.localeCompare(a.title));
         else if (sortMode === 'newest') filtered.reverse();
+        else if (sortMode === 'deadline') filtered = deadlineManager.sortByDeadline(filtered);
+        else if (sortMode === 'importance') filtered = deadlineManager.sortByImportance(filtered);
 
         // Pagination
         const totalPages = Math.ceil(filtered.length / this.config.ITEMS_PER_PAGE);
@@ -280,6 +289,31 @@ class ProjectManager {
             const coverClass = project.coverClass || '';
             const sourceUrl = this.getSourceCodeUrl(project.link);
 
+            // Get deadline info
+            const deadline = deadlineManager.getProjectDeadline(project.title);
+            const deadlineHtml = deadline ? (() => {
+                const importance = deadlineManager.getImportanceMetadata(deadline.importance);
+                const daysLeft = deadlineManager.getDaysUntilDeadline(deadline.deadline);
+                const statusText = deadlineManager.getDeadlineStatus(deadline.deadline);
+                
+                let statusClass = 'deadline-normal';
+                if (daysLeft < 0) statusClass = 'deadline-overdue';
+                else if (daysLeft <= 3) statusClass = 'deadline-urgent';
+                else if (daysLeft <= 7) statusClass = 'deadline-soon';
+
+                return `
+                    <div class="deadline-badge ${statusClass}">
+                        <div class="deadline-importance" style="background-color: ${importance.color};">
+                            <i class="${importance.icon}"></i>
+                        </div>
+                        <div class="deadline-info">
+                            <span class="deadline-date">${deadline.deadline}</span>
+                            <span class="deadline-status">${statusText}</span>
+                        </div>
+                    </div>
+                `;
+            })() : '';
+
             return `
                 <div class="card" data-category="${this.escapeHtml(project.category)}" onclick="window.location.href='${this.escapeHtml(project.link)}'; event.stopPropagation();">
                     <div class="card-actions">
@@ -289,12 +323,18 @@ class ProjectManager {
                                 title="${isBookmarked ? 'Remove from bookmarks' : 'Add to bookmarks'}">
                             <i class="${isBookmarked ? 'ri-bookmark-fill' : 'ri-bookmark-line'}"></i>
                         </button>
+                        <button class="deadline-btn" 
+                                onclick="event.preventDefault(); event.stopPropagation(); window.openDeadlineModal('${this.escapeHtml(project.title)}');"
+                                title="Set deadline and importance">
+                            <i class="ri-calendar-line"></i>
+                        </button>
                         <a href="${sourceUrl}" target="_blank" class="source-btn" 
                            onclick="event.stopPropagation();" 
                            title="View Source Code">
                             <i class="ri-github-fill"></i>
                         </a>
                     </div>
+                    ${deadlineHtml}
                     <div class="card-link">
                         <div class="card-cover ${coverClass}" style="${coverStyle}">
                             <i class="${this.escapeHtml(project.icon || 'ri-code-s-slash-line')}"></i>
@@ -319,6 +359,16 @@ class ProjectManager {
             const coverStyle = project.coverStyle || '';
             const coverClass = project.coverClass || '';
 
+            // Get deadline info
+            const deadline = deadlineManager.getProjectDeadline(project.title);
+            const deadlineBadgeHtml = deadline ? (() => {
+                const importance = deadlineManager.getImportanceMetadata(deadline.importance);
+                return `<span class="list-card-deadline-badge" style="background-color: ${importance.color};" title="Importance: ${importance.label}">
+                    <i class="${importance.icon}"></i>
+                    ${deadline.deadline}
+                </span>`;
+            })() : '';
+
             return `
                 <div class="list-card">
                     <div class="list-card-icon ${coverClass}" style="${coverStyle}">
@@ -327,6 +377,7 @@ class ProjectManager {
                     <div class="list-card-content">
                         <div class="list-card-header">
                             <h3 class="list-card-title">${this.escapeHtml(project.title)}</h3>
+                            ${deadlineBadgeHtml}
                             <span class="category-tag">${this.capitalize(project.category)}</span>
                         </div>
                         <p class="list-card-description">${this.escapeHtml(project.description || '')}</p>
@@ -336,6 +387,11 @@ class ProjectManager {
                                 onclick="window.toggleProjectBookmark(this, '${this.escapeHtml(project.title)}', '${this.escapeHtml(project.link)}', '${this.escapeHtml(project.category)}', '${this.escapeHtml(project.description || '')}');"
                                 title="${isBookmarked ? 'Remove from bookmarks' : 'Add to bookmarks'}">
                             <i class="${isBookmarked ? 'ri-bookmark-fill' : 'ri-bookmark-line'}"></i>
+                        </button>
+                        <button class="deadline-btn" 
+                                onclick="window.openDeadlineModal('${this.escapeHtml(project.title)}');"
+                                title="Set deadline and importance">
+                            <i class="ri-calendar-line"></i>
                         </button>
                         <a href="${project.link}" class="view-btn" title="View Project">
                             <i class="ri-arrow-right-line"></i>
@@ -505,11 +561,13 @@ document.addEventListener('componentLoaded', (e) => {
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         keyevents();
+        deadlineUI.init(); // Initialize deadline UI
         setTimeout(initProjectManager, 100); // Small delay to ensure components are ready
     });
 } else {
     // DOM already loaded
     keyevents();
+    deadlineUI.init(); // Initialize deadline UI
     setTimeout(initProjectManager, 100);
 }
 
