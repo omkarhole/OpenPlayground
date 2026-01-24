@@ -1722,9 +1722,12 @@
       "folder": "EvoRefresh",
       "path": "./projects/evorefresh/project.json",
       "link": "./projects/evorefresh/index.html"
+    },
+    {
       "folder": "Flownet",
       "path": "./projects/flownet/project.json",
       "link": "./projects/flownet/index.html"
+    },
      {
       "folder": "voice-forge",
       "path": "./projects/voice-forge/project.json",
@@ -1734,6 +1737,11 @@
       "folder": "Digital Mood Landscape",
       "path": "./projects/Digital Mood Landscape/project.json",
       "link": "./projects/Digital Mood Landscape/index.html"
+    },
+    {
+      "folder": "AsciiForge",
+      "path": "./projects/AsciiForge/project.json",
+      "link": "./projects/AsciiForge/index.html"
     }
   ]
 }
