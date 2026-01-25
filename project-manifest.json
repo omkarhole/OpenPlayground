@@ -1282,6 +1282,11 @@
       "folder": "color-blindness-checker",
       "path": "./projects/color-blindness-checker/project.json",
       "link": "./projects/color-blindness-checker/index.html"
+    },
+    {
+      "folder": "palette-generator",
+      "path": "./projects/palette-generator/project.json",
+      "link": "./projects/palette-generator/index.html"
     }
   ]
 }
