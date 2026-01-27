@@ -2023,6 +2023,14 @@
       "folder": "mousetone",
       "path": "./projects/mousetone/project.json",
       "link": "./projects/mousetone/index.html"
+ add-color-palette-generator
+ main
+
+    },
+    {
+      "folder": "emotion-theme",
+      "path": "./projects/emotion-theme/project.json",
+      "link": "./projects/emotion-theme/index.html"
  main
     }
   ]
