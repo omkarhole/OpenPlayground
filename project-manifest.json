@@ -2059,5 +2059,11 @@
       "link": "./projects/emotion-theme/index.html"
  main
     }
+    {
+      "folder": "snake world",
+      "path": "./projects/snake world/project.json",
+      "link": "./projects/snake world/index.html"
+     
+    }
   ]
 }
