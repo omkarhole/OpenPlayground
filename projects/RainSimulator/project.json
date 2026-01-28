@@ -1,5 +1,5 @@
 {
-  "title": "Word Clock",
+  "title": "Rain on Glass Simulator",
   "category": "utility",
   "difficulty": "Beginner",
   "description": "A utility project built with HTML, CSS, and JavaScript.",
@@ -8,6 +8,6 @@
     "CSS",
     "JavaScript"
   ],
-  "icon": "ri-time-line",
-  "coverStyle": "background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%); color: white;"
+  "icon": "ri-magic-line",
+  "coverStyle": "background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;"
 }
