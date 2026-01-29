@@ -1934,6 +1934,11 @@
       "link": "./projects/word-twist-challenge/index.html"
     },
     {
+      "folder": "MoodSkyGenerator",
+      "path": "./projects/MoodSkyGenerator/project.json",
+      "link": "./projects/MoodSkyGenerator/index.html"
+    },
+    {
       "folder": "WorldMeetingPlanner",
       "path": "./projects/WorldMeetingPlanner/project.json",
       "link": "./projects/WorldMeetingPlanner/index.html"
