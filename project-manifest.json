@@ -1954,6 +1954,11 @@
       "link": "./projects/staircase/index.html"
     },
     {
+      "folder": "expensetracker",
+      "path": "./projects/expensetracker/project.json",
+      "link": "./projects/expensetracker/index.html"
+    },
+    {
       "folder": "Focus Timer Pro",
       "path": "./projects/Focus-Timer-Pro/project.json",
       "link": "./projects/Focus-Timer-Pro/index.html"
