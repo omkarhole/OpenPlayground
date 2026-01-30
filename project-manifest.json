@@ -1,7 +1,7 @@
 {
   "version": "2.1",
   "generated": "2026-01-26T07:15:36.523Z",
-  "count": 384,
+  "count": 385,
   "projects": [
     {
       "folder": "15 Sliding Puzzle",
@@ -2017,6 +2017,11 @@
       "folder": "Budget-Planner",
       "path": "./projects/Budget-Planner/project.json",
       "link": "./projects/Budget-Planner/index.html"
+    },
+    {
+      "folder": "math-equation-builder",
+      "path": "./projects/math-equation-builder/project.json",
+      "link": "./projects/math-equation-builder/index.html"
     }
   ]
 }
