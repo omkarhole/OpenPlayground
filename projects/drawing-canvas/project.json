@@ -1,8 +1,8 @@
 {
-  "title": "Color Palette Generator",
+  "title": "Simple Drawing Canvas",
   "category": "fun",
   "difficulty": "Beginner",
-  "description": "An interactive tool that creates color palettes based on a base color, using complementary, analogous, or monochromatic schemes. Users can adjust hues and export palettes.",
+  "description": "A basic drawing app with tools for freehand drawing, shapes, colors, and brush sizes. It allows saving drawings as images and clearing the canvas.",
   "tech": [
     "HTML",
     "CSS",
