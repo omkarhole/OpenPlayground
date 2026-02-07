@@ -545,6 +545,11 @@
       "link": "./projects/draw-perfect-circle/index.html"
     },
     {
+      "folder": "drawing-canvas",
+      "path": "./projects/drawing-canvas/project.json",
+      "link": "./projects/drawing-canvas/index.html"
+    },
+    {
       "folder": "Drum-Kit-Activity",
       "path": "./projects/Drum-Kit-Activity/project.json",
       "link": "./projects/Drum-Kit-Activity/index.html"
