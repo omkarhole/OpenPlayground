@@ -39,6 +39,11 @@
       "link": "./projects/input-output/index.html"
     },
     {
+      "folder": "ChoiceGame",
+      "path": "./projects/ChoiceGame/project.json",
+      "link": "./projects/ChoiceGame/index.html"
+    },
+    {
       "folder": "UI-Gestures",
       "path": "./projects/UI-Gestures/project.json",
       "link": "./projects/UI-Gestures/index.html"
