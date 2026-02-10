@@ -439,6 +439,16 @@
       "link": "./projects/Cryptographic-Protocol-Simulator/index.html"
     },
     {
+      "folder": "calcx-calculator-app",
+      "path": "./projects/calcx-calculator-app/project.json",
+      "link": "./projects/calcx-calculator-app/index.html"
+    },
+    {
+      "folder": "quick-notes",
+      "path": "./projects/quick-notes/project.json",
+      "link": "./projects/quick-notes/index.html"
+    },
+    {
       "folder": "css-shapes-and-corners",
       "path": "./projects/css-shapes-and-corners/project.json",
       "link": "./projects/css-shapes-and-corners/index.html"
@@ -2248,7 +2258,11 @@
       "folder": "Random-Username-Generator",
       "path": "./projects/Random-Username-Generator/project.json",
       "link": "./projects/Random-Username-Generator/index.html"
+  },
+    {
+      "folder": "clipboard-activity-monitor",
+      "path": "./projects/clipboard-activity-monitor/project.json",
+      "link": "./projects/clipboard-activity-monitor/index.html"
   }
-  
   ]
 }
