@@ -2268,6 +2268,10 @@
       "folder": "js-event-flow-visualizer",
       "path": "./projects/js-event-flow-visualizer/project.json",
       "link": "./projects/js-event-flow-visualizer/index.html"
+   {
+      "folder": "privacy-permission-checker",
+      "path": "./projects/privacy-permission-checker/project.json",
+      "link": "./projects/privacy-permission-checker/index.html"
   }
   ]
 }
