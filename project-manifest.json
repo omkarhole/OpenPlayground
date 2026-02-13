@@ -459,6 +459,11 @@
       "link": "./projects/SecurePass/index.html"
     },
     {
+      "folder": "TriDuel",
+      "path": "./projects/TriDuel/project.json",
+      "link": "./projects/TriDuel/index.html"
+    },
+    {
       "folder": "css-shapes-and-corners",
       "path": "./projects/css-shapes-and-corners/project.json",
       "link": "./projects/css-shapes-and-corners/index.html"
@@ -1559,6 +1564,11 @@
       "link": "./projects/RegexTester/index.html"
     },
     {
+      "folder": "regex-playground",
+      "path": "./projects/regex-playground/project.json",
+      "link": "./projects/regex-playground/index.html"
+    },
+    {
       "folder": "responsive-landing-page",
       "path": "./projects/responsive-landing-page/project.json",
       "link": "./projects/responsive-landing-page/index.html"
@@ -2114,6 +2124,12 @@
       "link": "./projects/Digital Mood Landscape/index.html"
     },
     {
+      "folder": "Event Manager",
+      "path": "./projects/Event Manager/project.json",
+      "link": "./projects/Event Manager/index.html"
+    },
+    {
+      
       "folder": "RPG-character",
       "path": "./projects/RPG-character/project.json",
       "link": "./projects/RPG-character/index.html"
