@@ -1634,6 +1634,11 @@
       "link": "./projects/solar-system/index.html"
     },
     {
+      "folder": "sound-wave-visualizer",
+      "path": "./projects/sound-wave-visualizer/project.json",
+      "link": "./projects/sound-wave-visualizer/index.html"
+    },
+    {
       "folder": "SortingAlgorithmVisualizer",
       "path": "./projects/SortingAlgorithmVisualizer/project.json",
       "link": "./projects/SortingAlgorithmVisualizer/index.html"
